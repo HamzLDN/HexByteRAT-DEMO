@@ -42,7 +42,7 @@ class builder:
 	def build_python(self):
 		debug(self.details)
 		with open("sources/client.py", 'r') as py_file:
-			scirpt = py_file.read()
+			script = py_file.read()
 			py_file.close()
 		ip = self.details['IP']
 		port = self.details['PORT']
