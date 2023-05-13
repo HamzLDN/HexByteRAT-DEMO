@@ -31,7 +31,7 @@ class builder:
 		elif self.file_type.lower() == "python":
 			self.build_python()
 	def build_ps1(self):
-		with open("client.ps1", 'r') as ps_file:
+		with open("sources/client.ps1", 'r') as ps_file:
 			script = ps_file.read()
 			ps_file.close()
 		ip = self.details['IP']
@@ -41,7 +41,7 @@ class builder:
 		
 	def build_python(self):
 		debug(self.details)
-		with open("client.py", 'r') as py_file:
+		with open("sources/client.py", 'r') as py_file:
 			scirpt = py_file.read()
 			py_file.close()
 		ip = self.details['IP']
