@@ -21,4 +21,10 @@ This is a RAT which uses a tcp connection where you can connect and remotely con
 - If the output of the command gives you this `Restricted` then you must run the following.
 - `Set-ExecutionPolicy RemoteSigned`
 
+Or additionally run the script with these arguemnts
+
+```
+powershell -executionpolicy Bypass .\client.ps1
+```
+
 Once thats done change directory into HexByte run setup.bat
