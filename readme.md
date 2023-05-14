@@ -21,7 +21,7 @@ This is a RAT which uses a tcp connection where you can connect and remotely con
 - If the output of the command gives you this `Restricted` then you must run the following.
 - `Set-ExecutionPolicy RemoteSigned`
 
-Or additionally run the script with these arguemnts
+Or additionally you can run the script with these arguemnts
 
 ```
 powershell -executionpolicy Bypass .\client.ps1
