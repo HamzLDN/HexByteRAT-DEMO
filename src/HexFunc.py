@@ -10,4 +10,4 @@ def debug(*msg):
         try:
             print("{} {}".format(colorama.Fore.GREEN + timestamp, " ".join(msg)))
         except:
-            print("{} {} -> {}".format(colorama.Fore.RED + timestamp, colorama.Fore.WHITE, "ERROR", msg))
+            print("{} {} -> ERROR: {}".format(colorama.Fore.RED + timestamp, colorama.Fore.WHITE, msg))
