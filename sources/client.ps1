@@ -146,7 +146,7 @@ function main {
             send_data $data $data_stream
             Write-Host "sent files"
         } elseif ($recv -eq "File Explorer") {
-            print("Received File Explorer")
+            Write-Host "Received File Explorer"
             send_data "File Explorer" $data_stream
         }
     }
