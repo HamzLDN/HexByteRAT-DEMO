@@ -74,8 +74,6 @@ function screenshot($screenIndex, $type, $quality) {
 }
 
 function main {
-    # $ip_address = "5.tcp.eu.ngrok.io"
-    # $port_number = 17776
     Add-Type -AssemblyName System.Windows.Forms
     $ip_address = "CLIENT_IP"
     $port_number = CLIENT_PORT
