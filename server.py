@@ -37,7 +37,9 @@ class builder:
 		ip = self.details['IP']
 		port = self.details['PORT']
 		script = script.replace("CLIENT_IP", ip).replace("CLIENT_PORT", port)
-		print(script)
+		filename = "BluePill " + datetime.now().strftime("%H:%M:%S") + ".ps1"
+		with open(filename, "w") as f:
+			f.write(script)
 		
 	def build_python(self):
 		debug(self.details)
@@ -47,7 +49,7 @@ class builder:
 		ip = self.details['IP']
 		port = self.details['PORT']
 		script = script.replace("CLIENT_IP", ip).replace("CLIENT_PORT", port)
-		filename = "BluePill " + datetime.now().strftime("%H:%M:%S") + ".ps1"
+		filename = "BluePill " + datetime.now().strftime("%H:%M:%S") + ".py"
 		with open(filename, "w") as f:
 			f.write(script)
 
